@@ -54,7 +54,7 @@ public class OrderMaster implements Serializable {
     /**
      * 支付状态, 默认未支付
      */
-    private Byte payStatus;
+    private Integer payStatus;
 
     /**
      * 创建时间
