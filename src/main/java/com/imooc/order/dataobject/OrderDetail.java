@@ -1,15 +1,15 @@
 package com.imooc.order.dataobject;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.Date;
 import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.util.Date;
 
 /**
- * order_master
+ * order_detail
  * @author 
  */
 @Data
@@ -19,42 +19,31 @@ public class OrderDetail implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    private String detailId;
+
     private String orderId;
 
-    /**
-     * 买家名字
-     */
-    private String buyerName;
+    private String productId;
 
     /**
-     * 买家电话
+     * 商品名称
      */
-    private String buyerPhone;
+    private String productName;
 
     /**
-     * 买家地址
+     * 当前价格,单位分
      */
-    private String buyerAddress;
+    private BigDecimal productPrice;
 
     /**
-     * 买家微信openid
+     * 数量
      */
-    private String buyerOpenid;
+    private Integer productQuantity;
 
     /**
-     * 订单总金额
+     * 小图
      */
-    private BigDecimal orderAmount;
-
-    /**
-     * 订单状态, 默认为新下单
-     */
-    private Integer orderStatus;
-
-    /**
-     * 支付状态, 默认未支付
-     */
-    private Integer payStatus;
+    private String productIcon;
 
     /**
      * 创建时间
